@@ -1,0 +1,17 @@
+{
+  "name": "刘千亦 · 中考 3D 动画知识库",
+  "short_name": "3D 动画知识库",
+  "description": "数学 / 物理 / 化学 / 体育 / 实验 共 10 个 3D 知识点动画，带语音讲解、自测题、学习记录",
+  "lang": "zh-CN",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
