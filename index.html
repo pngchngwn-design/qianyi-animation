@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="3D动画知识库">
+<meta name="theme-color" content="#0b1220">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a6cd6'/%3E%3Ctext x='32' y='44' font-size='31' font-family='sans-serif' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3E3D%3C/text%3E%3C/svg%3E">
+<title>刘千亦 · 中考 3D 动画知识库</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{
+    font-family:"Microsoft YaHei","PingFang SC",-apple-system,BlinkMacSystemFont,sans-serif;
+    background:#0b1220;color:#e8eef7;line-height:1.7;
+    padding-bottom:40px;-webkit-text-size-adjust:100%;
+  }
+  .hero{
+    background:linear-gradient(150deg,#132340 0%,#0e1a2e 55%,#1a1430 100%);
+    padding:34px 20px 26px;border-bottom:1px solid #1e2c44;
+  }
+  .hero .tag{
+    display:inline-block;background:rgba(93,155,255,.16);color:#7fb3ff;
+    border:1px solid rgba(93,155,255,.35);border-radius:20px;
+    font-size:12px;letter-spacing:1.5px;padding:4px 13px;
+  }
+  .hero h1{font-size:25px;line-height:1.35;margin:14px 0 8px;letter-spacing:-.3px;}
+  .hero p{color:#8fa3c0;font-size:14px;}
+  .hero .stat{display:flex;gap:20px;margin-top:18px;flex-wrap:wrap;}
+  .hero .stat div{font-size:13px;color:#8fa3c0;}
+  .hero .stat b{display:block;font-size:20px;color:#5d9bff;font-weight:800;line-height:1.3;}
+
+  .howto{
+    margin:18px 16px 4px;padding:14px 16px;border-radius:12px;
+    background:rgba(93,155,255,.09);border:1px solid rgba(93,155,255,.24);
+    font-size:13.5px;color:#b9cbe3;line-height:1.85;
+  }
+  .howto b{color:#7fb3ff;}
+
+  .grp{margin:26px 16px 0;}
+  .grp h2{
+    font-size:15px;font-weight:800;letter-spacing:.5px;margin-bottom:12px;
+    display:flex;align-items:center;gap:9px;
+  }
+  .grp h2 .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;}
+  .grp h2 .cnt{font-size:12px;color:#6f87a8;font-weight:600;margin-left:auto;}
+
+  a.card{
+    display:block;text-decoration:none;color:inherit;
+    background:#131f33;border:1px solid #22334f;border-left:4px solid #3d6fd4;
+    border-radius:12px;padding:14px 16px;margin-bottom:10px;
+    transition:transform .15s,background .15s;
+  }
+  a.card:active{transform:scale(.985);background:#17253c;}
+  a.card .t{font-size:16px;font-weight:700;line-height:1.5;color:#eef4fc;}
+  a.card .d{font-size:13px;color:#8fa3c0;margin-top:5px;line-height:1.65;}
+  a.card .go{
+    display:inline-block;margin-top:9px;font-size:12.5px;font-weight:700;
+    color:#5d9bff;letter-spacing:.5px;
+  }
+
+  footer{
+    margin:34px 16px 0;padding-top:18px;border-top:1px solid #1a2740;
+    font-size:12.5px;color:#61748f;line-height:1.9;
+  }
+  footer b{color:#8fa3c0;}
+
+  a.dashlink{
+    display:block;margin:14px 16px 0;padding:14px 16px;border-radius:12px;
+    background:linear-gradient(100deg,#12352c,#123044);border:1px solid #2f7a63;
+    color:#a8f0d6;font-size:14.5px;font-weight:800;text-decoration:none;
+  }
+  a.dashlink:active{background:#123f33;}
+  a.dashlink span{display:block;font-size:12.5px;font-weight:600;color:#7fc6ac;margin-top:4px;}
+
+  .duebar{
+    margin:14px 16px 0;padding:14px 16px;border-radius:12px;
+    background:linear-gradient(100deg,#3a2f14,#2c2413);border:1px solid #8a6a1f;
+    font-size:14px;color:#ffd166;line-height:1.8;
+  }
+  .duebar b{color:#ffe9a8;}
+  .duebar a{color:#ffd166;}
+
+  .addhome{
+    margin:14px 16px 0;padding:14px 16px;border-radius:12px;
+    background:linear-gradient(100deg,#1d2a4a,#2a1d3a);border:1px solid #4a5f9a;
+    font-size:13.5px;color:#c3d2e6;line-height:1.85;
+  }
+  .addhome b{color:#bcd0ff;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="tag">2027 中 考 · 冲 刺 市 一 高</span>
+  <h1>刘千亦的 3D 动画知识库</h1>
+  <p>把看不见的知识，做成看得见、能动手的动画</p>
+  <div class="stat">
+    <div><b>20</b>个知识点动画</div>
+    <div><b>5</b>个板块</div>
+    <div><b>370</b>分（占中考 50.7%）</div>
+  </div>
+</div>
+
+<div class="howto">
+  <b>怎么用（很重要）：</b>点开一个动画 → 点「▶ 播放讲解」听语音 →
+  看完点「自测 ▸」做一道题。<br>
+  <b>看一个 → 做一题 → 再看下一个。</b>不要一次连看三个以上。<br>
+  手机上画面小的话，点「⛶ 全屏」；字幕在画面<b>下面单独一条</b>，不会再挡住动画了。
+</div>
+
+<a class="dashlink" href="dashboard.html">📊 我的学习记录
+  <span>看了几次、看了多久、错题本、今天该复习哪个 —— 都在这里</span>
+</a>
+
+<a class="dashlink" href="resources.html"
+   style="background:linear-gradient(100deg,#1d2a4a,#2a1d3a);border-color:#4a5f9a;color:#bcd0ff;">
+  🔗 权威免费学习资源清单
+  <span>教育部官方平台、PhET 互动仿真、GeoGebra、官方科普视频 —— 全部免费，已逐个核实</span>
+</a>
+
+<div class="duebar" id="duebar" style="display:none"></div>
+
+<div class="addhome" id="addhome" style="display:none">
+  📱 <b>把它变成 iPad / 手机上的一个 App 图标</b><br>
+  用 <b>Safari</b> 打开这个页面 → 点底部的「分享」按钮 → 往下找「<b>添加到主屏幕</b>」→ 点「添加」。<br>
+  以后从桌面图标点开，就是<b>全屏、没有地址栏</b>的，跟装了 App 一样。
+</div>
+
+<div class="grp">
+  <h2><span class="dot" style="background:#3d6fd4"></span>数学 <span class="cnt">3 个</span></h2>
+  <a class="card" href="math_equation.html" style="border-left-color:#3d6fd4">
+    <div class="t">一元二次方程：根的个数，Δ 说了算</div>
+    <div class="d">抛物线与 x 轴交点的横坐标就是方程的根；拖滑块看「两个交点 → 一个 → 没有」的三种情况<br>
+      <span style="color:#7de2a0">人教版九上 第25章 一元二次方程</span></div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="math_quad.html" style="border-left-color:#3d6fd4">
+    <div class="t">二次函数里，a、b、c 各管什么</div>
+    <div class="d">拖滑块实时看抛物线怎么变：a 管开口、c 管上下、b 管左右</div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="math_pythagoras.html" style="border-left-color:#3d6fd4">
+    <div class="t">勾股定理，为什么是 a² + b² = c²</div>
+    <div class="d">用四个直角三角形拼成赵爽弦图，一步步把定理证出来</div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+</div>
+
+<div class="grp">
+  <h2><span class="dot" style="background:#7a5cd6"></span>物理 · 沪科版九年级（正在学） <span class="cnt">7 个</span></h2>
+  <a class="card" href="phy_engine.html" style="border-left-color:#7a5cd6">
+    <div class="t">热机：四个冲程，只有一个是“干活”的</div>
+    <div class="d">活塞、连杆、曲轴按真实运动学联动；吸气 → 压缩 → 做功 → 排气，一眼看清内能怎么变成转动<br>
+      <span style="color:#7de2a0">第14章 内能与热机</span></div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="phy_melt.html" style="border-left-color:#7a5cd6">
+    <div class="t">熔化与凝固：为什么温度会"停住不动"</div>
+    <div class="d">海波（晶体）加热到 48℃ 就停住了，松香却一直升；试管里的固体从下往上变少，图像上有"平台"<br>
+      <span style="color:#7de2a0">第13章 温度与物态变化</span></div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="phy_heat.html" style="border-left-color:#7a5cd6">
+    <div class="t">比热容：同样的热，为什么水升温慢</div>
+    <div class="d">两个烧杯同时加热，温度计红柱上升速度一眼看出差别；温度由 Q = c·m·Δt 实时算<br>
+      <span style="color:#7de2a0">第14章 内能与热机</span></div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="phy_circuit.html" style="border-left-color:#7a5cd6">
+    <div class="t">串联和并联：电流、电压到底怎么走</div>
+    <div class="d">黄点＝自由电荷，跑得越快＝电流越大。串联一条路（I 处处相等），并联两条路（I干＝I₁＋I₂）<br>
+      <span style="color:#7de2a0">第15章 电与电路</span></div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="phy_ohm.html" style="border-left-color:#7a5cd6">
+    <div class="t">欧姆定律：电流到底听谁的</div>
+    <div class="d">左边电路、右边 I-U 图像同步变：R 不变时 I 与 U 成正比（过原点的直线），U 不变时 R 越大 I 越小<br>
+      <span style="color:#7de2a0">第16章 探究电路</span></div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="phy_power.html" style="border-left-color:#7a5cd6">
+    <div class="t">电功率：电流做功的快慢</div>
+    <div class="d">两只灯并联，谁亮谁暗一目了然；下面两条功率条长度正好 2 : 1，P = U·I 实时算<br>
+      <span style="color:#7de2a0">第17章 电流做功与电功率</span></div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="phy_magnet.html" style="border-left-color:#7a5cd6">
+    <div class="t">通电螺线管的磁场：右手一握就知道 N 极</div>
+    <div class="d">磁感线是算出来的闭合曲线；改一下电流方向，N、S 极当场对调 —— 安培定则最直观的验证<br>
+      <span style="color:#7de2a0">第18章 磁及其相互作用</span></div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+</div>
+
+<div class="grp">
+  <h2><span class="dot" style="background:#5a7ab5"></span>物理 · 八年级（复习用） <span class="cnt">3 个</span></h2>
+  <a class="card" href="phy_pressure.html" style="border-left-color:#5a7ab5">
+    <div class="t">液体压强：U 形管高度差一眼看出</div>
+    <div class="d">转方向、改深度、换盐水，高度差跟着变；p = ρgh 实时算 —— 压强专题薄弱点补强<br>
+      <span style="color:#7de2a0">八下压强（沪科版第八章）</span></div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="phy_buoyancy.html" style="border-left-color:#5a7ab5">
+    <div class="t">浮力：阿基米德原理与浮沉条件</div>
+    <div class="d">木块慢慢浸入水中，浮力箭头跟着变长，看它怎么浮起来</div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="phy_lens.html" style="border-left-color:#5a7ab5">
+    <div class="t">凸透镜成像规律（照相机 / 投影仪 / 放大镜）</div>
+    <div class="d">三条特殊光线，拖动物距看像怎么变；一倍焦距分虚实</div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+</div>
+
+<div class="grp">
+  <h2><span class="dot" style="background:#0d9488"></span>化学 <span class="cnt">3 个</span></h2>
+  <a class="card" href="chem_oxygen.html" style="border-left-color:#0d9488">
+    <div class="t">氧气的实验室制取：两套装置，七个字</div>
+    <div class="d">高锰酸钾法 + 过氧化氢法；查装定点燃收离熄；“先离后熄”为什么重要，看一遍就懂<br>
+      <span style="color:#7de2a0">她的薄弱点：氧气制取实验</span></div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="chem_electrolysis.html" style="border-left-color:#0d9488">
+    <div class="t">电解水的微观本质</div>
+    <div class="d">水分子拆开成原子，原子重新组合成氢气和氧气，2 : 1</div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="chem_conservation.html" style="border-left-color:#0d9488">
+    <div class="t">质量守恒定律的微观解释</div>
+    <div class="d">反应前后原子一个不多一个不少 —— 这就是要配平的原因</div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+</div>
+
+<div class="grp">
+  <h2><span class="dot" style="background:#ea7317"></span>体育 <span class="cnt">2 个</span></h2>
+  <a class="card" href="sport_jump.html" style="border-left-color:#ea7317">
+    <div class="t">立定跳远：四个阶段的动作分解</div>
+    <div class="d">预备 → 起跳 → 腾空 → 落地，慢放看清每个关节</div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="sport_flex.html" style="border-left-color:#ea7317">
+    <div class="t">坐位体前屈：正确姿势与两个常见错误</div>
+    <div class="d">呼气慢推 vs 膝盖弯曲猛冲，绿色和红色虚线对比一目了然</div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+</div>
+
+<div class="grp">
+  <h2><span class="dot" style="background:#d64545"></span>实验操作 <span class="cnt">2 个</span></h2>
+  <a class="card" href="exp_filter.html" style="border-left-color:#d64545">
+    <div class="t">过滤：一贴、二低、三靠</div>
+    <div class="d">粗盐提纯全流程，每个扣分点都标出来了</div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+  <a class="card" href="exp_density.html" style="border-left-color:#d64545">
+    <div class="t">用天平和量筒测密度</div>
+    <div class="d">左物右码读数、视线与凹液面相平，ρ = m ÷ V</div>
+    <span class="go">打开动画 ▸</span>
+  </a>
+</div>
+
+<footer>
+  <b>使用说明</b><br>
+  · 每个动画都是<b>单文件、离线可播</b>，断网也能看<br>
+  · 手机横竖屏都能用，可拖动画面 360° 旋转<br>
+  · 全部内容由公式驱动，数据经过人工核对<br>
+  · 体育动画只帮你「看懂动作」，提分还要靠上操场练<br>
+  <br>
+  制作用于 2027 年中考备考 · 目标：濮阳市第一高级中学
+</footer>
+
+<script>
+/* 只在 iPad / iPhone 上提示「添加到主屏幕」（iOS 的全屏只能这么实现） */
+(function () {
+  var ua = navigator.userAgent || '';
+  var iOS = /iPad|iPhone|iPod/.test(ua) ||
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);   // iPadOS 13+ 伪装成 Mac
+  var standalone = window.navigator.standalone === true ||
+                   (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+  if (iOS && !standalone) {
+    var el = document.getElementById('addhome');
+    if (el) el.style.display = 'block';
+  }
+})();
+
+/* 首页的「今天该复习」提醒 —— 读本地学习记录 */
+(function () {
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function dstr(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  var t = dstr(new Date());
+  var DB;
+  try { DB = JSON.parse(localStorage.getItem('qy_study_v1') || 'null'); } catch (e) { DB = null; }
+  if (!DB || !DB.items) return;
+  var due = [];
+  Object.keys(DB.items).forEach(function (k) {
+    var x = DB.items[k];
+    if (x.reviewAt && x.reviewAt <= t) due.push({ k: k, name: x.title || k, late: x.reviewAt < t });
+  });
+  if (!due.length) return;
+  var box = document.getElementById('duebar');
+  box.innerHTML = '<b>📅 今天该复习 ' + due.length + ' 个知识点</b><br>' +
+    due.map(function (o) {
+      return '· <a href="' + o.k + '.html">' + o.name + '</a>' + (o.late ? '（已逾期）' : '');
+    }).join('<br>') +
+    '<br><span style="font-size:12.5px;color:#c9a95a">复习方式：合上屏幕，用自己的话讲给爸妈听一遍，讲完去「学习记录」里打勾。</span>';
+  box.style.display = 'block';
+})();
+</script>
+
+</body>
+</html>
